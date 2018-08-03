@@ -1,0 +1,12 @@
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Models\bin\Debug\netcoreapp2.0\DataGent.Models.deps.json
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Models\bin\Debug\netcoreapp2.0\DataGent.Models.dll
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Models\bin\Debug\netcoreapp2.0\DataGent.Models.pdb
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Models\obj\Debug\netcoreapp2.0\DataGent.Models.csprojResolveAssemblyReference.cache
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Models\obj\Debug\netcoreapp2.0\DataGent.Models.csproj.CoreCompileInputs.cache
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Models\obj\Debug\netcoreapp2.0\DataGent.Models.AssemblyInfoInputs.cache
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Models\obj\Debug\netcoreapp2.0\DataGent.Models.AssemblyInfo.cs
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Models\obj\Debug\netcoreapp2.0\DataGent.Models.dll
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Models\obj\Debug\netcoreapp2.0\DataGent.Models.pdb
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Models\bin\Debug\netcoreapp2.0\Newtonsoft.Json.dll
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Models\bin\Debug\netcoreapp2.0\Newtonsoft.Json.xml
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Models\obj\Debug\netcoreapp2.0\DataGent.Models.csproj.CopyComplete

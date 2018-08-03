@@ -1,0 +1,95 @@
+﻿@model IEnumerable<DataGent.Models.Stad>
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h2>View</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Naam)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Straat)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nummer)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Postcode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Gemeente)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Webadres)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Telefoon)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Categorie)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Opmerkingen)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Lat)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Long)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Naam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Straat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nummer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Postcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gemeente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Webadres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefoon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categorie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Opmerkingen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Long)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

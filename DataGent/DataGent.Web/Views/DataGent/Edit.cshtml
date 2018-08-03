@@ -1,0 +1,95 @@
+﻿@model DataGent.Models.StadCommentaar
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Naam
+            </th>
+            <th>
+                Straat
+            </th>
+            <th>
+                Nummer
+            </th>
+            <th>
+                Postcode
+            </th>
+            <th >
+                Webadres
+            </th>
+            <th>
+                Telefoon
+            </th>
+            <th>
+                Categorie
+            </th>
+            <th>
+                Opmerkingen
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Stad.Naam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Stad.Straat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Stad.Nummer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Stad.Postcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Stad.Webadres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Stad.Telefoon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Stad.Categorie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Stad.Opmerkingen)
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<hr />
+
+<p>Uw laatste commentaar was ingevoegd op @Model.Commentaar.Tijdstip</p>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" name="stadId" asp-for="@Model.Commentaar.StadId" />
+            <input type="hidden" value="@Html.AntiForgeryToken()"/>
+
+            <div class="form-group">
+                <label asp-for="Commentaar" class="control-label"></label>
+                <input asp-for="Commentaar" class="form-control" value="@Model.Commentaar.CommentaarText"/>
+                @*<textarea form="EditForm" rows="10" cols="100" asp-for="Commentaar" class="form-control">@Model.Commentaar.CommentaarText</textarea>*@
+                <span asp-validation-for="Commentaar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

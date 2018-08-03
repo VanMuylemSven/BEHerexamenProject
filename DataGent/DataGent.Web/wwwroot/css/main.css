@@ -1,0 +1,18 @@
+﻿
+table{
+    table-layout:fixed;
+    width:100%;
+}
+.colWebadres {
+    width:15%;
+    overflow-x:auto;
+}
+.colTdWebadres{
+    overflow-x:auto;
+}
+.colNummer {
+    width: 70px;
+}
+.colTdOpmerkingen {
+    overflow-x: auto;
+}

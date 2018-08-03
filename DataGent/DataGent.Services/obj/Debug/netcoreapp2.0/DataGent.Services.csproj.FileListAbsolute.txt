@@ -1,0 +1,16 @@
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Services\bin\Debug\netcoreapp2.0\DataGent.Services.deps.json
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Services\bin\Debug\netcoreapp2.0\DataGent.Services.dll
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Services\bin\Debug\netcoreapp2.0\DataGent.Services.pdb
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Services\bin\Debug\netcoreapp2.0\DataGent.Models.dll
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Services\bin\Debug\netcoreapp2.0\DataGent.Repositories.dll
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Services\bin\Debug\netcoreapp2.0\DataGent.Models.pdb
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Services\bin\Debug\netcoreapp2.0\DataGent.Repositories.pdb
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Services\obj\Debug\netcoreapp2.0\DataGent.Services.csprojResolveAssemblyReference.cache
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Services\obj\Debug\netcoreapp2.0\DataGent.Services.csproj.CoreCompileInputs.cache
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Services\obj\Debug\netcoreapp2.0\DataGent.Services.AssemblyInfoInputs.cache
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Services\obj\Debug\netcoreapp2.0\DataGent.Services.AssemblyInfo.cs
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Services\obj\Debug\netcoreapp2.0\DataGent.Services.csproj.CopyComplete
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Services\obj\Debug\netcoreapp2.0\DataGent.Services.dll
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Services\obj\Debug\netcoreapp2.0\DataGent.Services.pdb
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Services\bin\Debug\netcoreapp2.0\Newtonsoft.Json.dll
+C:\Source\Backend_Development\Herexamen_Project\DataGent\DataGent.Services\bin\Debug\netcoreapp2.0\Newtonsoft.Json.xml

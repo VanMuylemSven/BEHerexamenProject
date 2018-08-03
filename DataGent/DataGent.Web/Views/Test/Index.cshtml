@@ -1,0 +1,116 @@
+﻿@model IEnumerable<DataGent.Models.Stad>
+
+@{
+    ViewData["Title"] = "TestIndex";
+}
+
+<h2>start</h2>
+
+@*await Html.PartialAsync("_LoginPartial") *@
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@if (SignInManager.IsSignedIn(User))
+{
+    <h1>LOGGED IN</h1>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Naam
+                </th>
+                <th>
+                    Straat
+                </th>
+                <th>
+                    Nummer
+                </th>
+                <th>
+                    Postcode
+                </th>
+                <th>
+                    Gemeente
+                </th>
+                <th>
+                    Webadres
+                </th>
+                <th>
+                    Telefoon
+                </th>
+                <th>
+                    Categorie
+                </th>
+                <th>
+                    Opmerkingen
+                </th>
+                <th>
+                    Commentaar
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Naam)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Straat)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nummer)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Postcode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Gemeente)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Webadres)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefoon)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Categorie)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Opmerkingen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Commentaar)
+
+                        @if(!String.IsNullOrEmpty(item.Commentaar))
+                        {
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit Commentaar </a>
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
+                        }
+                        else
+                        {
+                            <a asp-action="Edit" asp-route-id="@item.Id">Create Commentaar</a>
+                        }
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+
+
+}
+else
+{
+    <h1>NOT LOGGED IN</h1>
+
+}
+
+

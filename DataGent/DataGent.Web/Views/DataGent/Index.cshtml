@@ -1,0 +1,112 @@
+﻿@model DataGent.Web.ViewModels.StedenIndex_VM
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<head>
+    <link href="~/css/main.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+@inject SignInManager<DataGent.Models.ApplicationUser> SignInManager
+@inject UserManager<DataGent.Models.ApplicationUser> UserManager
+@if (SignInManager.IsSignedIn(User))
+{
+    <h2>Welcome, @User.Identity.Name </h2>
+}
+else
+{
+    <h2>Welcome.</h2>
+    <p>In order to be able to add your own comments to the data, please Log In.</p>
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Naam
+            </th>
+            <th>
+                Straat
+            </th>
+            <th class="colNummer">
+                Nummer
+            </th>
+            <th class="colWebadres">
+                Webadres
+            </th>
+            <th>
+                Telefoon
+            </th>
+            <th>
+                Categorie
+            </th>
+            <th>
+                Opmerkingen
+            </th>
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <th class="colComment">
+                    Commentaar
+                </th>
+
+                <th>
+                    Create/delete
+                </th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model.StedenList)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Stad.Naam)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Stad.Straat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Stad.Nummer)
+                </td>
+                <td class="colTdWebadres">
+                    @Html.DisplayFor(modelItem => item.Stad.Webadres)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Stad.Telefoon)
+                </td>
+                <td >
+                    @Html.DisplayFor(modelItem => item.Stad.Categorie)
+                </td>
+                <td class="colTdOpmerkingen">
+                    @Html.DisplayFor(modelItem => item.Stad.Opmerkingen)
+                </td>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    @if (item.Commentaar != null)
+                    {
+                        <td class="colCommentaar">
+                            @Html.DisplayFor(modelItem => item.Commentaar.CommentaarText)
+                            (@Html.DisplayFor(modelItem => item.Commentaar.Tijdstip))
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Commentaar.CommentaarId" asp-route-stadId="@item.Stad.Id">Edit</a> <p> | </p>
+                            <a asp-action="Delete" asp-route-id="@item.Commentaar.CommentaarId" asp-route-stadId="@item.Stad.Id">Delete</a>
+                        </td>
+                    }
+                    else
+                    {
+                        <td></td>
+                        <td>
+                            <a asp-action="Create" asp-route-id="@item.Stad.Id">Voeg commentaar toe</a>
+                        </td>
+                    }
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
